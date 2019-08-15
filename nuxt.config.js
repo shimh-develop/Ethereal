@@ -42,7 +42,9 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '@/plugins/vuetify'
+    {src: '@/plugins/init'},
+    '@/plugins/vuetify',
+    '@/plugins/lodash',
   ],
 
   /*
@@ -70,12 +72,12 @@ module.exports = {
         import: ["~assets/style/variables.styl"]
       }
     },
-    
+
     /*
     ** You can extend webpack config here
     */
     extend(config, ctx) {
-      
+
     }
   }
 }
